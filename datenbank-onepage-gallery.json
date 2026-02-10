@@ -1,0 +1,99 @@
+[
+    {
+        "id": "001",
+        "folder": "001-Store-Kopie",
+        "images": [
+            "a_001_ 1-1-Store-Kopie.jpg"
+        ]
+    },
+    {
+        "id": "002",
+        "folder": "002-Store-Kopie",
+        "images": [
+            "a_002_1-1-Store-Kopie.jpg",
+            "b_007_ 1-1-Store-Kopie.jpg",
+            "c_005_Store-Kopie.jpg",
+            "d_009_ 1-1-Store-Kopie.jpg"
+        ]
+    },
+    {
+        "id": "003",
+        "folder": "003-Store-Kopie",
+        "images": [
+            "a_002_1-1-Store-Kopie.jpg"
+        ]
+    },
+    {
+        "id": "004",
+        "folder": "004-Store-Kopie",
+        "images": [
+            "a_004_ 1-1-Store-Kopie.jpg"
+        ]
+    },
+    {
+        "id": "005",
+        "folder": "005-Store-Kopie",
+        "images": [
+            "a_005_Store-Kopie.jpg"
+        ]
+    },
+    {
+        "id": "006",
+        "folder": "006-Store-Kopie",
+        "images": [
+            "a_006_1-1-Store-Kopie.jpg"
+        ]
+    },
+    {
+        "id": "007",
+        "folder": "007-Store-Kopie",
+        "images": [
+            "a_007_ 1-1-Store-Kopie.jpg"
+        ]
+    },
+    {
+        "id": "008",
+        "folder": "008-Store-Kopie",
+        "images": [
+            "a_006_ 1-1-Store-Kopie.jpg"
+        ]
+    },
+    {
+        "id": "009",
+        "folder": "009_Store-Kopie",
+        "images": [
+            "a_009_ 1-1-Store-Kopie.jpg"
+        ]
+    },
+    {
+        "id": "010",
+        "folder": "010_Store-Kopie",
+        "images": [
+            "010_ 1-1-Store-Kopie.jpg",
+            "a.010.1_ 1-1-Store-Kopie - Kopie.jpg",
+            "b.130_ a_1-1-Store-Kopie.jpg"
+        ]
+    },
+    {
+        "id": "013",
+        "folder": "013_Store-Kopie",
+        "images": [
+            "a_023_1-1-Store-Kopie.jpg",
+            "b_013_ b_1-1-Store-Kopie.jpg"
+        ]
+    },
+    {
+        "id": "023",
+        "folder": "023-Store-Kopie",
+        "images": [
+            "a_023_ 1-1-Store-Kopie.jpg"
+        ]
+    },
+    {
+        "id": "123",
+        "folder": "123_Store-Kopie",
+        "images": [
+            "a.123_ a_1-1-Store-Kopie.jpg"
+        ]
+    }
+]
