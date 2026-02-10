@@ -4,8 +4,8 @@ import re
 from PIL import Image, ImageOps
 
 # KONFIGURATION
-SOURCE_FOLDER = '.' 
-OUTPUT_FILE = 'datenbank-onepage-gallery.json'
+SOURCE_FOLDER = './public/assets/galerie' 
+OUTPUT_FILE = './src/assets/datenbank-onepage-gallery.json'
 THUMB_SIZE = (400, 400)
 
 def create_thumbnail(img_path, thumb_path):

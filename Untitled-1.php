@@ -1,1 +1,0 @@
-<?php echo "Hallo, das ist mein neues Archiv!"; ?>
