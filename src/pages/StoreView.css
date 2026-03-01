@@ -84,4 +84,25 @@
     font-size: 0.9rem;
     background: transparent;
   }
+
+  @media (max-width: 600px) {
+  /* ... deine anderen Regeln ... */
+
+  /* Das hier löst die Punkte 1, 2 und 3: */
+  .store-image-left img, 
+  .main-store-img,
+  .store-upper-section img {
+    max-width: 100% !important; /* Verhindert das Herausragen */
+    height: auto !important;     /* Behält das Seitenverhältnis bei */
+    display: block;
+    margin: 0 auto;              /* Zentriert das Bild in der Spalte */
+  }
+
+  /* Speziell für das breite Ausstellungsbild (ID 002): */
+  .store-image-left {
+    width: 100% !important;
+    overflow: hidden; /* Sicherheitsnetz */
+    padding: 0;       /* Verhindert zusätzliche Breite durch Innenabstand */
+  }
+}
 }
