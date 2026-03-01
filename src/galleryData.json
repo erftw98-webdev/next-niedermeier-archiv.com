@@ -1,0 +1,54 @@
+[
+  {
+    "id": "001",
+    "title": "Ganges Star",
+    "jahr": "2005",
+    "preis": "3500",
+    "waehrung": "EUR",
+    "technik": "Lack und Bitumen auf festem Baumwollstoff",
+    "format": "135cm x 155cm",
+    "url": "/images/001-Store-Kopie/Ganges_Star.jpg",
+    "teile": "4",
+    "revolution_aktiv": false,
+    "teile_status": []
+  },
+  {
+  "id": "002",
+  "title": "Bice Amoretti",
+  "url": "/images/002-Store-Kopie/info/vierteilig-ausstellung-orig002.jpg",
+  "jahr": "2006",
+  "preis": "4200",
+  "waehrung": "EUR",
+    "technik": "Lack und Bitumen auf festem Baumwollstoff",
+    "format": "50cm x 50cm",
+  "teile": 4,
+  "revolution_aktiv": true,
+  "teile_status": [
+  { 
+    "teil_id": "A", 
+    "url": "/images/002-Store-Kopie/thumbs/a_002_1-1-Store-Kopie.jpg",
+    "preis": 1200,
+    "status": "verfügbar"
+  },
+  { 
+    "teil_id": "B", 
+    "url": "/images/002-Store-Kopie/thumbs/b_007_ 1-1-Store-Kopie.jpg",
+    "preis": 1200,
+    "status": "reserviert",
+    "user": "Max Mustermann"
+  },
+  { 
+    "teil_id": "C", 
+    "url": "/images/002-Store-Kopie/thumbs/c_005_1-1-Store-Kopie.jpg",
+    "preis": 1200,
+    "status": "verfügbar"
+  },
+  { 
+    "teil_id": "D", 
+    "url": "/images/002-Store-Kopie/thumbs/d_009_ 1-1-Store-Kopie.jpg",
+    "preis": 1200,
+    "status": "verfügbar"
+  }
+]
+}
+]

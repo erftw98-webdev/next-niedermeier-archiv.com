@@ -40,3 +40,16 @@
 .read-the-docs {
   color: #888;
 }
+
+
+/* Ein thumb in der kleinen Galerie .. In der App.css oder am Ende deiner SingleView Styles */
+.thumb-link img {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+
+.thumb-link img:hover {
+  transform: scale(1.1); /* Ein thumb in der kleinen Galerie .. Das Bild wird 10% größer */
+  border-color: #000;    /* Der Rahmen wird schwarz */
+  filter: brightness(1.1); /* Es wird minimal heller */
+}

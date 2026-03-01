@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  /* Hier definieren wir den 100px Abstand als eigene Variable, falls Tailwind ihn ignoriert */
+  --spacing-galerie: 100px;
+}
+
+/* Wir erzwingen den Hintergrund und die Basis-Styles */
+body {
+  @apply bg-white text-black antialiased;
+  margin: 0;
+  padding: 0;
+}
