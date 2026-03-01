@@ -1,0 +1,39 @@
+/* Grund-Design für die ganze Seite */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Das Raster-System */
+.gallery-grid {
+  display: grid;
+  /* Mobil: 1 Spalte, ab ca. 550px Breite: automatisch auffüllen */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Erzwungene 4 Spalten auf großen Monitoren (PC) */
+@media (min-width: 1200px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Styling für die einzelnen Bild-Karten */
+.gallery-item {
+  background: white;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

@@ -1,4 +1,4 @@
-/* Grund-Design für die ganze Seite */
+/* index.css - 75% Scaling & Mobile Grid */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -8,25 +8,44 @@ body {
 /* Das Raster-System */
 .gallery-grid {
   display: grid;
-  /* Mobil: 1 Spalte, ab ca. 550px Breite: automatisch auffüllen */
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
-  max-width: 1400px;
+  /* Standard für Desktop: 4 Spalten */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 15px; /* Spaltabstand verringert */
+  max-width: 1050px; /* Reduziert von 1400px (75%) */
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 30px 15px;
 }
 
-/* Erzwungene 4 Spalten auf großen Monitoren (PC) */
+/* --- MOBILE ANPASSUNGEN --- */
+
+/* 1. Handy Hochformat: Immer 2 Spalten */
+@media (max-width: 600px) and (orientation: portrait) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px;
+    padding: 15px 10px;
+  }
+}
+
+/* 2. Handy Querformat: Immer 4 Spalten */
+@media (max-width: 950px) and (orientation: landscape) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 10px;
+    padding: 15px 10px;
+  }
+}
+
+/* PC-Ansicht stabil halten */
 @media (min-width: 1200px) {
   .gallery-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-/* Styling für die einzelnen Bild-Karten */
 .gallery-item {
   background: white;
-  padding: 10px;
+  padding: 8px; /* Reduziert von 10px */
   border: 1px solid #ddd;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -36,4 +55,22 @@ body {
   width: 100%;
   height: auto;
   display: block;
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr !important; /* Erzwingt EINE Spalte auf dem Handy */
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+    padding: 20px;
+  }
+  .gallery-item {
+    max-width: 85%; /* Macht die Karte in der einen Spalte etwas schmaler */
+    margin: 0 auto; /* Zentriert die Karte */
+  }
 }

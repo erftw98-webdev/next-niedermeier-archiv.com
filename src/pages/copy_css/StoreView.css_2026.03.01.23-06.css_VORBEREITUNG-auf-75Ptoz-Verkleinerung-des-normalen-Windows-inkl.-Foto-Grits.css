@@ -1,0 +1,531 @@
+/* --- BASIS LAYOUT --- */
+.store-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Helvetica', Arial, sans-serif;
+}
+
+.store-upper-section {
+  display: flex;
+  gap: 60px;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.store-image-left {
+  flex: 1.2;
+  position: relative; /* Wichtig für das Info-Icon auf dem Bild */
+}
+
+.store-info-right {
+
+  flex: 1;
+
+}
+
+.main-store-img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* --- ATTRIBUTE & BRAND --- */
+.attribute-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.attr-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 5px 0;
+}
+
+.label {
+  font-weight: bold;
+  color: #555;
+}
+
+.brand-header {
+  margin-top: 30px;
+  font-family: serif;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  border-top: 2px solid #333;
+  padding-top: 10px;
+}
+
+/* --- BUTTONS OBEN --- */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.action-buttons button {
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.1s, opacity 0.2s;
+}
+
+.action-buttons button:hover { opacity: 0.9; transform: translateY(-2px); }
+
+.btn-dark { background: #333; color: white; }
+.btn-white { background: white; border: 1px solid #ccc; color: #333; }
+.btn-yellow { background: #d4af37; color: white; }
+.btn-green { background: #2da40a; color: white; flex-grow: 1; }
+
+/* --- TEILE-REVOLUTION (UNTERER BEREICH) --- */
+.store-detail-area {
+  margin-top: 80px;
+  padding-bottom: 100px;
+  text-align: center;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.divider {
+  border: 0;
+  border-top: 1px dotted #ccc;
+  margin: 50px 0;
+}
+
+.gallery-wall {
+  background-color: #f4f4f4;
+  padding: 100px 50px;
+  border: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  min-height: 400px;
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.05);
+}
+
+/* Die 3 Layout-Varianten */
+.parts-grid { transition: all 0.5s ease-in-out; }
+.parts-grid.linear-h { display: flex; flex-direction: row; gap: 30px; }
+.parts-grid.linear-v { display: flex; flex-direction: column; gap: 30px; align-items: center; }
+.parts-grid.quadrat { display: grid; grid-template-columns: repeat(2, auto); gap: 30px; }
+
+.framed-part {
+  background: white;
+  padding: 6px;
+  box-shadow: 15px 20px 30px rgba(0,0,0,0.3);
+}
+
+.framed-part img {
+  max-width: 200px;
+  display: block;
+}
+
+/* Layout Buttons unten */
+.layout-controls {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.layout-controls button {
+  background: white;
+  border: 1px solid #333;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* --- TOOLTIP & INFO-ICON --- */
+.info-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;
+  cursor: help;
+}
+
+.info-icon {
+  width: 18px;
+  height: 18px;
+  background: #cccccc; /* Hellgrau wie gewünscht */
+  color: #333; /* Dunkle Schrift für Kontrast auf Hellgrau */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-family: "Georgia", serif;
+  font-weight: bold;
+  cursor: help;
+  border: none;
+}
+
+.btn-container-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Buttons und Icons links ausrichten */
+}
+
+.attr-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px dotted #eee;
+  padding: 10px 0;
+}
+
+.attr-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Die Werte bleiben rechts, das Icon kommt links darunter */
+}
+
+/* Icon auf dem Bild bleibt oben links */
+.icon-on-image {
+  position: absolute;
+  bottom: 15px; /* Statt top: 15px */
+  left: 15px;
+  z-index: 10;
+}
+
+/* Positionierung Links unter dem Element */
+.icon-below-left {
+  display: flex;
+  justify-content: flex-start; /* Erzwingt Linksbündigkeit */
+  margin-top: 6px;
+  width: 100%;
+}
+
+.tooltip-box {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  background: #2a2a2a;
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+  z-index: 9999;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.info-wrapper:hover .tooltip-box {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.tooltip-box strong {
+  color: #FFD700; /* Deine fetten Worte in Gold */
+}
+
+.tooltip-arrow {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #2a2a2a transparent transparent transparent;
+}
+
+.tooltip-box {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 130%; /* Ein Stück über dem Icon */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  background: #2a2a2a; /* Sehr dunkles Grau */
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+  z-index: 99999; /* Extrem hoch, damit es über allem schwebt */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none; /* Verhindert, dass das Tooltip flackert */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  border: 1px solid #444;
+}
+
+/* Zeigen beim Hovern */
+.info-wrapper:hover .tooltip-box {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px); /* Kleiner "Slide-up" Effekt */
+}
+
+/* Das Info-Icon in Hellgrau */
+.info-icon {
+  width: 18px;
+  height: 18px;
+  background: #cccccc; /* Hellgrau wie gewünscht */
+  color: #333; /* Dunkle Schrift für Kontrast auf Hellgrau */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-family: "Georgia", serif;
+  font-weight: bold;
+  cursor: help;
+  border: none;
+}
+
+/* Positionierung Links unter dem Element */
+.icon-below-left {
+  display: flex;
+  justify-content: flex-start; /* Erzwingt Linksbündigkeit */
+  margin-top: 6px;
+  width: 100%;
+}
+
+.btn-container-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Buttons und Icons links ausrichten */
+}
+
+.attr-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px dotted #eee;
+  padding: 10px 0;
+}
+
+.attr-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Die Werte bleiben rechts, das Icon kommt links darunter */
+}
+
+/* Icon auf dem Bild bleibt oben links */
+.icon-on-image {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 10;
+}
+
+/* Styling für die minimale Commerce-Struktur */
+.ecommerce-min-area {
+  margin-bottom: 25px;
+  border-left: 3px solid #cccccc; /* Ein kleiner grauer Akzent links */
+  padding-left: 15px;
+}
+
+.work-title {
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.price-tag {
+  font-size: 1.4rem;
+  margin: 5px 0;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Attribut Liste */
+.attribute-list-area {
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.attr-row {
+  border-bottom: 1px solid #eee;
+  padding: 4px 0;
+}
+
+/* Icons Links ausrichten */
+.icon-below-left {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
+/* Icon auf dem Bild UNTEN LINKS */
+.icon-on-image-bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 50;
+}
+
+/* Hellgraue Icons */
+.info-icon {
+  background-color: #cccccc !important;
+  color: #333 !important;
+  border: 1px solid #999;
+}
+
+.brand-nav-row {
+  display: flex;
+  justify-content: space-between; /* Schiebt STORE nach links und Liste nach rechts */
+  align-items: flex-start;
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+}
+
+.brand-text {
+  font-family: serif;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+/* Der kleine "Liste" Button */
+.btn-list-link {
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+.btn-list-link:hover {
+  background: #e0e0e0;
+  border-color: #999;
+}
+
+/* Layout-Korrektur für die Icons in dieser Zeile */
+.brand-left, .brand-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.main-work-title-big {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.main-work-title-big {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  text-align: center; /* Zentriert wie im Screenshot */
+}
+
+.commerce-list-container {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+.commerce-row {
+  display: flex;
+  justify-content: space-between; /* Links: Label, Rechts: Wert */
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-family: Arial, sans-serif;
+}
+
+.comm-label {
+  font-weight: normal;
+  color: #333;
+}
+
+.comm-value {
+  font-weight: normal;
+  color: #000;
+  text-align: right;
+}
+
+.brand-nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* Teile-Revolution START */
+.section-headline {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.framed-part-container {
+  display: flex;
+  flex-direction: column; /* Standard für Quadrat/Linear-H */ 
+  align-items: center;
+  gap: 10px;
+}
+
+/* Spezialfall: Vertikale Anordnung - Text RECHTS daneben */
+.parts-grid.linear-v .framed-part-container {
+  flex-direction: row; 
+  align-items: center;
+}
+
+.part-info-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.user-label {
+  font-weight: bold;
+  border-bottom: 1px dotted #ccc;
+}
+/* Teile-Revolution ENDE */
+
+/* Standard: Text unter dem Bild (Quadrat & Horizontal) */
+.framed-part-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ccc; /* Der "Fenster"-Rahmen */
+  padding: 15px;
+}
+
+/* Anforderung 4: Spezialfall Vertikal - Text RECHTS daneben */
+.gallery-wall.linear-v .framed-part-wrapper {
+  flex-direction: row; 
+  align-items: flex-start;
+  text-align: left;
+}
+
+.part-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.user-id {
+  color: #d32f2f; /* Ein dezentes Rot für reservierte User */
+  font-weight: bold;
+}
