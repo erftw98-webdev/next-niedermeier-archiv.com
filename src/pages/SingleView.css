@@ -1,0 +1,84 @@
+/* SingleView.css */
+
+.single-view-container {
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.single-view-container h1 {
+  font-size: 1.5rem;
+}
+
+.single-view-main-container {
+  height: 60vh; /* Am PC schön groß */
+  display: flex;
+  justify-content: center;
+  background: #f8f8f8;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.single-view-main-container img {
+  max-height: 100%;
+  max-width: 100%; /* Das verhindert, dass es am Handy ausbricht! */
+  object-fit: contain;
+}
+
+.single-view-lower-section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.thumb-wrapper-mobile {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.single-view-navigation {
+  margin-top: 15px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.single-view-navigation p {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0;
+}
+
+.single-view-navigation button {
+  padding: 8px 20px;
+  cursor: pointer;
+  background: #333;
+  color: #fff;
+  border: none;
+  borderRadius: 4px;
+}
+
+/* --- MOBILE OPTIMIERUNG --- */
+@media (max-width: 600px) {
+  .single-view-main-container {
+    height: auto; /* Auf dem Handy darf der Container mitwachsen */
+    min-height: 300px;
+    padding: 10px;
+  }
+
+  .single-view-lower-section {
+    align-items: center; /* Am Handy lieber alles mittig */
+  }
+
+  .thumb-wrapper-mobile {
+    justify-content: center; /* Thumbs am Handy zentrieren */
+  }
+
+  .single-view-navigation {
+    flex-direction: column; /* Text und Button untereinander */
+    gap: 10px;
+  }
+}
