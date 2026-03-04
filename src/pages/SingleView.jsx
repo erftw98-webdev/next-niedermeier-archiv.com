@@ -37,7 +37,7 @@ function SingleView() {
                   width: '80px', 
                   height: '80px', 
                   objectFit: 'cover', 
-                  borderRadius: '4px', 
+                  border-radius: '4px', 
                   border: '1px solid #ddd'
                 }} 
               />
