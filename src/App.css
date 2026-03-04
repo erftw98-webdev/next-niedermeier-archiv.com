@@ -29,3 +29,24 @@
   border-color: #000;
   filter: brightness(1.1);
 }
+
+/* Media Query für Handys */
+@media (max-width: 768px) {
+  body {
+    background-image: url('./images/hintergrund-Startseitenbild_phone-only_SPINDEL_zweifach.jpg');
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+    background-position: center top;
+    background-size: 100% auto;
+    background-color: #000;
+  }
+
+  /* Zweispaltige Galerie im GalleryGrid */
+  /* Ich vermute die Klasse heißt .gallery-grid, bitte ggf. anpassen */
+  .gallery-grid { 
+    display: grid;
+    grid-template-columns: 1fr 1fr !important; 
+    gap: 10px;
+    padding: 10px;
+  }
+}
