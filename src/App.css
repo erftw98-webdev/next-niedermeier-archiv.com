@@ -33,13 +33,16 @@
 @media screen and (max-width: 768px) {
   
   body {
-    /* Absoluter Pfad vom Root aus */
-    background-image: url('/images/hintergrund-Startseitenbild_phone-only_SPINDEL_zweifach.jpg') !important;
+    /* Wichtig: Kein .jpg.jpg am Ende! */
+    background-image: url('/images/bg-spindel.jpg') !important;
     background-attachment: fixed !important;
     background-repeat: repeat-y !important;
     background-position: center top !important;
     background-size: 100% auto !important;
-    background-color: #000 !important;
+    
+    /* Test: Wenn das Bild fehlt, wird der Hintergrund rot. 
+       Siehst du rot auf dem Handy, wissen wir: Das CSS wird geladen! */
+    background-color: red !important; 
   }
 
   /* Zweispaltige Galerie erzwingen */
