@@ -1,52 +1,63 @@
-/* App.css - Auf 75% angepasst */
+/* Basis-Styles für Desktop (75% Breite) */
 #root {
-  max-width: 960px; /* Reduziert von 1280px (ca. 75%) */
+  max-width: 960px; 
   margin: 0 auto;
-  padding: 1.5rem; /* Etwas weniger Padding */
+  padding: 1.5rem;
   text-align: center;
 }
 
 .logo {
-  height: 4.5em; /* Reduziert von 6em */
+  height: 4.5em; 
   padding: 1.1em;
   will-change: filter;
   transition: filter 300ms;
 }
-/* ... restliche Logo-Styles bleiben gleich ... */
 
 .card {
-  padding: 1.5em; /* Reduziert von 2em */
+  padding: 1.5em;
 }
 
-/* Hover-Effekt für Thumbs */
+/* Hover-Effekt für Thumbs (allgemein) */
 .thumb-link img {
   transition: transform 0.2s ease, border-color 0.2s ease;
   cursor: pointer;
 }
 
 .thumb-link img:hover {
-  transform: scale(1.05); /* Dezenterer Zoom */
+  transform: scale(1.05);
   border-color: #000;
   filter: brightness(1.1);
 }
 
-/* Media Query für Handys */
-@media (max-width: 768px) {
+/* --- MOBILE OPTIMIERUNG (Alles in einer Media Query) --- */
+@media screen and (max-width: 768px) {
+  
   body {
-    background-image: url('./images/hintergrund-Startseitenbild_phone-only_SPINDEL_zweifach.jpg');
-    background-attachment: fixed;
-    background-repeat: repeat-y;
-    background-position: center top;
-    background-size: 100% auto;
-    background-color: #000;
+    /* Absoluter Pfad vom Root aus */
+    background-image: url('/images/hintergrund-Startseitenbild_phone-only_SPINDEL_zweifach.jpg') !important;
+    background-attachment: fixed !important;
+    background-repeat: repeat-y !important;
+    background-position: center top !important;
+    background-size: 100% auto !important;
+    background-color: #000 !important;
   }
 
-  /* Zweispaltige Galerie im GalleryGrid */
-  /* Ich vermute die Klasse heißt .gallery-grid, bitte ggf. anpassen */
-  .gallery-grid { 
-    display: grid;
+  /* Zweispaltige Galerie erzwingen */
+  .gallery-grid, 
+  .grid-container, 
+  .gallery-container,
+  .app-shell .gallery-grid { 
+    display: grid !important;
     grid-template-columns: 1fr 1fr !important; 
-    gap: 10px;
-    padding: 10px;
+    gap: 8px !important;
+    padding: 8px !important;
+  }
+
+  /* Falls die Bilder innerhalb des Grids eine feste Breite haben, 
+     müssen wir sie auf 100% setzen, damit sie in die 2 Spalten passen */
+  .gallery-grid img, 
+  .grid-container img {
+    width: 100% !important;
+    height: auto !important;
   }
 }
